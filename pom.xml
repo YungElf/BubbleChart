@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>my.plugin.group</groupId>
+    <artifactId>intellij-plugin</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- Define properties for IntelliJ version and Java version -->
+    <properties>
+        <intellij.version>2023.2.3</intellij.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- IntelliJ IDEA OpenAPI -->
+        <dependency>
+            <groupId>com.intellij</groupId>
+            <artifactId>openapi</artifactId>
+            <version>7.0.3</version>
+        </dependency>
+
+        <!-- GraphStream Swing UI -->
+        <dependency>
+            <groupId>org.graphstream</groupId>
+            <artifactId>gs-ui-swing</artifactId>
+            <version>2.0</version>
+        </dependency>
+
+        <!-- GraphStream Core -->
+        <dependency>
+            <groupId>org.graphstream</groupId>
+            <artifactId>gs-core</artifactId>
+            <version>2.0</version> <!-- Use a more recent version -->
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>AGROBubbleChart</finalName>
+        <plugins>
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version> <!-- Use a compatible version -->
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

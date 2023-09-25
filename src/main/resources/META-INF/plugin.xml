@@ -1,0 +1,25 @@
+<idea-plugin>
+    <id>my.plugin.group.intellij-plugin</id>
+    <name>AGRO Bubble Chart</name>
+    <version>1.0</version>
+    <vendor email="alex.rodriguez@external.us.idemia.com" url="https://www.example.com">Your Name or Organization</vendor>
+
+    <description>
+        <![CDATA[
+        This is a plugin to generate and display bubble charts for workflow files.
+        ]]>
+    </description>
+
+    <actions>
+        <action id="Graph.GenerateFlowchartAction" class="Graph.GenerateFlowchartAction" text="Generate Bubble Chart" description="Generate a bubble chart for the workflow">
+            <keyboard-shortcut first-keystroke="ctrl pressed X" keymap="$default"/>
+            <add-to-group group-id="MainMenu" anchor="first"/>
+        </action>
+    </actions>
+
+
+    <depends>com.intellij.modules.platform</depends>
+
+
+
+</idea-plugin>
